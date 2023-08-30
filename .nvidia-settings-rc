@@ -1,0 +1,17 @@
+#
+# /home/vanderson/.nvidia-settings-rc
+#
+# Configuration file for nvidia-settings - the NVIDIA Settings utility
+# Generated on Thu Aug 24 12:28:20 2023
+#
+
+# ConfigProperties:
+
+RcFileLocale = C
+DisplayStatusBar = Yes
+SliderTextEntries = Yes
+IncludeDisplayNameInConfigFile = Yes
+UpdateRulesOnProfileNameChange = Yes
+
+# Attributes:
+
