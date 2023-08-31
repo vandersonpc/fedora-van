@@ -46,6 +46,14 @@ cd Nordzy-cursors
 cd $builddir 
 rm -rf Nordzy-cursors
 
+## Synth Shell
+git clone --recursive https://github.com/andresgongora/synth-shell.git
+chmod +x synth-shell/setup.sh
+cd synth-shell/
+./setup.sh
+cd $builddir 
+rm -rf synth-shell
+
 ## Updade DFN
 dnf update
 #dnf clean all
