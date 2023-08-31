@@ -31,9 +31,6 @@ cp fedora.png /home/$username/Pictures/backgrounds/
 #cp -R usr/* /usr/
 cp -R etc/* /etc/
 
-## Restore settings
-dconf load -f / < saved_settings.dconf
-
 ## Download Nordic Theme
 cd /usr/share/themes/
 git clone https://github.com/EliverLara/Nordic.git
@@ -57,6 +54,10 @@ rm -rf synth-shell
 ## Updade DFN
 dnf update
 #dnf clean all
+
+## Restore settings
+dnf install dconf -y
+dconf load -f / < saved_settings.dconf
 
 ## Install RPM fusion packages 
 dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm -y
@@ -140,8 +141,9 @@ dnf install kicad kicad-packages3d kicad-doc -y
 
 ## Onenote linux
 wget https://github.com/patrikx3/onenote/releases/download/v2023.10.235/p3x-onenote-2023.10.235.x86_64.rpm
-dnf localinstall p3x-onenote-2023.10.235.x86_64.rpm
+dnf localinstall p3x-onenote-2023.10.235.x86_64.rpm -y
 rm -f p3x-onenote-2023.10.235.x86_64.rpm
 
-## NVidia driver
-dnf install xorg-x11-drv-nvidia-470xx akmod-nvidia-470xx -y
+## NVidia driver 
+# Uncomment to use on Vaio Laptop
+#dnf install xorg-x11-drv-nvidia-470xx akmod-nvidia-470xx -y
