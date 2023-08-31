@@ -28,8 +28,11 @@ mkdir -p /home/$username/Pictures/backgrounds
 cp -R dotconfig/* /home/$username/.config/
 cp bg.jpg /home/$username/Pictures/backgrounds/
 cp fedora.png /home/$username/Pictures/backgrounds/
-cp -R usr/* /usr/
+#cp -R usr/* /usr/
 cp -R etc/* /etc/
+
+## Restore settings
+dconf load -f / < saved_settings.dconf
 
 ## Download Nordic Theme
 cd /usr/share/themes/
